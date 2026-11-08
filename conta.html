@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha conta — Filipe</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="auth-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Filipe<span aria-hidden="true">.</span></a>
+      <div class="auth-actions">
+        <a class="auth-back" href="index.html">Voltar ao site</a>
+        <button class="btn btn-ghost btn-sm" type="button" data-logout>Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-main auth-main-wide" id="conteudo" data-require="cliente">
+    <section class="auth-card conta-card">
+      <header class="conta-head">
+        <span class="avatar avatar-lg" id="avatar" aria-hidden="true">?</span>
+        <div>
+          <p class="eyebrow">Área do cliente</p>
+          <h1>Olá, <span data-user="nome">…</span></h1>
+          <p class="conta-sub">Bem-vindo(a) de volta. Aqui estão os dados da sua conta.</p>
+        </div>
+      </header>
+
+      <dl class="conta-dados">
+        <div>
+          <dt>Nome</dt>
+          <dd data-user="nome">—</dd>
+        </div>
+        <div>
+          <dt>E-mail</dt>
+          <dd data-user="email">—</dd>
+        </div>
+        <div>
+          <dt>Perfil</dt>
+          <dd><span class="badge" data-user="role">—</span></dd>
+        </div>
+        <div>
+          <dt>Conta criada em</dt>
+          <dd data-user="criadoEm">—</dd>
+        </div>
+      </dl>
+
+      <div class="conta-actions">
+        <a class="btn btn-primary" href="index.html#contato">Solicitar orçamento</a>
+        <a class="btn btn-outline" href="admin.html" data-admin-only hidden>Painel do administrador</a>
+        <button class="btn btn-ghost" type="button" data-logout>Sair da conta</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

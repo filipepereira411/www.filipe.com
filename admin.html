@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel do administrador — Filipe</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="auth-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Filipe<span aria-hidden="true">.</span></a>
+      <div class="auth-actions">
+        <a class="auth-back" href="index.html">Ver o site</a>
+        <button class="btn btn-ghost btn-sm" type="button" data-logout>Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main" id="conteudo" data-require="admin">
+    <div class="container">
+      <header class="admin-head">
+        <div>
+          <p class="eyebrow">Administração</p>
+          <h1>Painel do administrador</h1>
+          <p class="section-sub">Sessão iniciada como <strong data-user="nome">…</strong> (<span data-user="email">…</span>).</p>
+        </div>
+      </header>
+
+      <div class="stats admin-stats">
+        <div class="stat">
+          <p class="stat-number" id="stat-total">—</p>
+          <p class="stat-label">utilizadores</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number" id="stat-clientes">—</p>
+          <p class="stat-label">clientes</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number" id="stat-admins">—</p>
+          <p class="stat-label">administradores</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number" id="stat-mensagens">—</p>
+          <p class="stat-label">mensagens recebidas</p>
+        </div>
+      </div>
+
+      <section class="admin-block" aria-labelledby="titulo-utilizadores">
+        <div class="admin-block-head">
+          <h2 id="titulo-utilizadores">Utilizadores</h2>
+          <p class="muted-small">Contas de clientes e administradores registadas no site.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Utilizador</th>
+                <th scope="col">Perfil</th>
+                <th scope="col">Criado em</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-corpo">
+              <tr><td colspan="5" class="table-empty">Carregando…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-block" aria-labelledby="titulo-mensagens">
+        <div class="admin-block-head">
+          <h2 id="titulo-mensagens">Mensagens de contato</h2>
+          <p class="muted-small">Pedidos enviados pelo formulário do site.</p>
+        </div>
+
+        <div class="messages" id="mensagens">
+          <p class="table-empty">Carregando…</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

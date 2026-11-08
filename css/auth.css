@@ -1,0 +1,253 @@
+/* ==========================================================================
+   Filipe — estilos das telas de autenticação e do painel admin
+   Depende das variáveis definidas em css/styles.css
+   ========================================================================== */
+
+/* ---------- Header simples das páginas internas ---------- */
+.auth-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.auth-header .header-inner { padding-block: 1rem; }
+
+.auth-back {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.auth-back:hover { color: var(--accent-dark); text-decoration: underline; }
+
+.auth-actions { display: flex; align-items: center; gap: 0.85rem; }
+
+.btn-sm { padding: 0.5rem 0.95rem; font-size: 0.85rem; }
+
+/* ---------- Área central ---------- */
+.auth-main {
+  min-height: calc(100vh - 140px);
+  display: grid;
+  place-items: center;
+  padding: 2.5rem 1.25rem 4rem;
+}
+.auth-main-wide { align-items: start; }
+
+.auth-card {
+  width: min(100%, 460px);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.auth-head { margin-bottom: 1.5rem; }
+.auth-head h1 { font-size: clamp(1.6rem, 4vw, 2rem); margin-bottom: 0.4rem; }
+.auth-head p { color: var(--muted); font-size: 0.95rem; }
+
+.auth-form { display: grid; gap: 1rem; }
+
+.label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.field-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+.field-link:hover { text-decoration: underline; }
+
+.auth-switch {
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+.auth-switch a { font-weight: 600; color: var(--accent-dark); text-decoration: none; }
+.auth-switch a:hover { text-decoration: underline; }
+
+.demo-hint {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.demo-hint code {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+}
+
+.demo-link {
+  padding: 0.7rem 0.85rem;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: #065f46;
+  word-break: break-all;
+}
+.demo-link a { color: #047857; font-weight: 600; }
+
+.form-status a { color: inherit; font-weight: 700; }
+
+/* ---------- Conta do cliente ---------- */
+.conta-card { width: min(100%, 620px); }
+
+.conta-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.conta-head h1 { margin-bottom: 0.25rem; }
+.conta-sub { color: var(--muted); font-size: 0.92rem; margin: 0; }
+
+.avatar-lg {
+  width: 56px;
+  height: 56px;
+  font-size: 1rem;
+  flex: none;
+}
+
+.conta-dados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin: 1.5rem 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.conta-dados > div { padding: 0.9rem 1rem; background: var(--surface); }
+.conta-dados dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+.conta-dados dd { margin: 0; font-size: 0.92rem; color: var(--ink-soft); word-break: break-word; }
+
+.conta-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+/* ---------- Painel admin ---------- */
+.admin-main { padding-block: 2.5rem 4.5rem; }
+
+.admin-head { margin-bottom: 2rem; }
+.admin-head h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: 0.35rem; }
+.admin-head .section-sub { margin: 0; }
+
+.admin-stats { margin-bottom: 2.5rem; }
+
+.admin-block { margin-bottom: 2.5rem; }
+.admin-block-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.9rem;
+}
+.admin-block-head h2 { font-size: 1.25rem; margin: 0; }
+.muted-small { margin: 0; font-size: 0.85rem; color: var(--muted); }
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 620px;
+}
+.data-table th,
+.data-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.data-table th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #f7f4f0;
+}
+.data-table tbody tr:last-child td { border-bottom: 0; }
+.data-table tbody tr:hover { background: #fdfbf8; }
+
+.table-empty {
+  padding: 1.5rem 1rem;
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--line);
+  color: var(--ink-soft);
+}
+.badge.admin { background: var(--accent-soft); color: var(--accent-dark); }
+.badge.cliente { background: #e0f2fe; color: #075985; }
+
+.messages { display: grid; gap: 0.85rem; }
+
+.message-card {
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.message-card header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.message-card strong { font-size: 0.95rem; }
+.message-card .message-meta { font-size: 0.8rem; color: var(--muted); }
+.message-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  white-space: pre-line;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 560px) {
+  .auth-actions { gap: 0.5rem; }
+  .conta-dados { grid-template-columns: 1fr; }
+  .conta-actions .btn { width: 100%; }
+  .auth-main { padding-inline: 1rem; }
+  .auth-header .auth-back { font-size: 0.82rem; }
+}
