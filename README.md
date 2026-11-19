@@ -1,4 +1,5 @@
-# [[www.filipe.com] https://wwwfilipecom.vercel.app/](https://wwwfilipecom.vercel.app/)
+#  https://wwwfilipecom.vercel.app/
+Variante: https://arena.ai/c/01a1f34c-f225-71e7-b93d-7aae54bb9026
 
 Site institucional/loja com **área do cliente** e **painel do administrador**.
 HTML, CSS e JavaScript puros no front-end + um servidor **Node.js sem dependências** para autenticação.
